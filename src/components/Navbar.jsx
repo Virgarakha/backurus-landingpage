@@ -2,6 +2,7 @@ export function Navbar({ logo }) {
   const links = [
     { label: 'Docs', href: '#documentation' },
     { label: 'GitHub', href: 'https://github.com/Virgarakha/backurus' },
+    { label: 'Stack', href: '#stack' },
     { label: 'Install', href: '#installation' },
   ]
 

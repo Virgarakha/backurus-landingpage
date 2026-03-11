@@ -51,6 +51,30 @@ select {
   color: white;
 }
 
+@keyframes backurus-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.backurus-marquee {
+  animation: backurus-marquee 28s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backurus-marquee {
+    animation: none;
+  }
+}
+
+.backurus-marquee:hover {
+  animation-play-state: paused;
+}
+
 code[class*='language-'],
 pre[class*='language-'] {
   font-family:

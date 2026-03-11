@@ -11,7 +11,7 @@ export function Hero({ logo }) {
           </div>
 
           <h1 className="mt-8 max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
-            Backurus
+            Backurus 1.1
           </h1>
           <p className="mt-5 max-w-2xl text-2xl font-medium tracking-tight text-zinc-200">
             A Modern Backend Framework for Node.js inspired by Laravel.

@@ -3,6 +3,7 @@ import logo from './assets/img/favicon.png'
 import { docsSections, repoHighlights } from './docsData.js'
 import { Navbar } from './components/Navbar.jsx'
 import { Hero } from './components/Hero.jsx'
+import { StackMarquee } from './components/StackMarquee.jsx'
 import { Installation } from './components/Installation.jsx'
 import { Features } from './components/Features.jsx'
 import { CLIExample } from './components/CLIExample.jsx'
@@ -207,6 +208,7 @@ function LandingPage() {
 
       <main>
         <Hero logo={logo} />
+        <StackMarquee />
         <Installation command={installationCommand} />
         <Features items={features} />
         <CLIExample command={cliCommand} />
