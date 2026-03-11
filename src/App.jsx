@@ -11,6 +11,7 @@ import { Workflow } from './components/Workflow.jsx'
 import { Documentation } from './components/Documentation.jsx'
 import { Footer } from './components/Footer.jsx'
 import { DocsCodeBlock } from './components/DocsCodeBlock.jsx'
+import { Routes, Route } from "react-router-dom"
 
 const installationCommand = `npx create-backurus-app my-api
 cd my-api
@@ -379,33 +380,12 @@ function DocumentationPage() {
   )
 }
 
-function resolvePage(pathname) {
-  return pathname.startsWith('/docs') ? 'docs' : 'landing'
-}
-
 function App() {
-  const [page, setPage] = useState(() => resolvePage(window.location.pathname))
-
-  useEffect(() => {
-    const handleNavigation = () => setPage(resolvePage(window.location.pathname))
-
-    window.addEventListener('popstate', handleNavigation)
-    window.addEventListener('pageshow', handleNavigation)
-
-    return () => {
-      window.removeEventListener('popstate', handleNavigation)
-      window.removeEventListener('pageshow', handleNavigation)
-    }
-  }, [])
-
-  useEffect(() => {
-    document.title =
-      page === 'docs'
-        ? 'Backurus Docs | Framework Documentation'
-        : 'Backurus | Modern Backend Framework for Node.js'
-  }, [page])
-
-  return page === 'docs' ? <DocumentationPage /> : <LandingPage />
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/docs" element={<DocumentationPage />} />
+    </Routes>
+  )
 }
-
 export default App
