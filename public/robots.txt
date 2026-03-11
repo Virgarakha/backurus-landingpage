@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://backurus.vercel.app/sitemap.xml
