@@ -1,4 +1,5 @@
 import { SectionHeader } from './SectionHeader.jsx'
+import { Link } from "react-router-dom"
 
 export function Documentation() {
   return (
@@ -27,12 +28,12 @@ export function Documentation() {
         </div>
 
         <div className="mt-8">
-          <a
-            href="/docs"
+          <Link
+            to="/docs"
             className="inline-flex items-center justify-center rounded-full border border-emerald-400/30 bg-emerald-400 px-6 py-3 text-sm font-semibold text-emerald-950 transition hover:bg-emerald-300"
           >
             Open Docs
-          </a>
+          </Link>
         </div>
       </div>
     </section>

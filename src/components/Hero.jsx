@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function Hero({ logo }) {
   return (
     <section id="top" className="mx-auto max-w-7xl px-6 pb-24 pt-20 lg:px-8 lg:pb-32 lg:pt-24">
@@ -26,12 +28,12 @@ export function Hero({ logo }) {
             >
               Get Started
             </a>
-            <a
-              href="/docs"
+            <Link
+              to="/docs"
               className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-emerald-400/30 hover:bg-emerald-400/10"
             >
               View Documentation
-            </a>
+            </Link>
           </div>
 
           <div className="mt-12 grid gap-4 text-sm text-zinc-300 sm:grid-cols-3">
